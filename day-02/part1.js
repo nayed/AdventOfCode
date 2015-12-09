@@ -1,20 +1,22 @@
 'use strict'
 
-const fs = require('fs')
+import Box from './box.js'
+import fs from 'fs'
 
 let input = fs.readFileSync('input.txt', 'utf8').split('\n')
-let l = 0
-let w = 0
-let h = 0
-let calcul = 0
+
+let calc = 0
 
 let feet = input.map((dimensions) => {
   dimensions = dimensions.split('x')
-  l = dimensions[0]
-  w = dimensions[1]
-  h = dimensions[2]
-  calcul += (2 * l * w) + (2 * w * h) + (2 * h * l)
+  let l = dimensions[0]
+  let w = dimensions[1]
+  let h = dimensions[2]
+  let box = new Box(l, w, h)
+
+  calc += box.squareFeet()
+  
   return dimensions
 })
 
-console.log(calcul)
+console.log(calc)
