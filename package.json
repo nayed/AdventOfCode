@@ -1,0 +1,25 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "Nayed's progression in Advent of Code Challenge",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^6.3.13",
+    "babel-core": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13"
+    },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nayed/AdventOfCode.git"
+  },
+  "author": "Nayed Saïd Ali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nayed/AdventOfCode/issues"
+  },
+  "homepage": "https://github.com/Nayed/AdventOfCode#readme"
+}
