@@ -8,9 +8,9 @@ class Ribbon extends Box {
     }
 
     smallestRibSide() {
-        let lw = (this.length + this.width + this.length + this.width)
-        let wh = (this.width + this.height + this.width + this.height)
-        let hl = (this.height + this.length + this.height + this.length)
+        let lw = this.length + this.length + this.width + this.width
+        let wh = this.width + this.width + this.height + this.height
+        let hl = this.height + this.height + this.length + this.length
 
         if ((lw <= wh) && (lw <= hl)) {
             return lw

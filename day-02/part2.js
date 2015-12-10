@@ -8,7 +8,7 @@ let input = fs.readFileSync('input.txt', 'utf8').split('\n')
 
 let calc = 0
 
-let feet = input.map((dimensions) => {
+let feet = input.map(dimensions => {
     dimensions = dimensions.split('x')
 
     let l = Number(dimensions[0])
@@ -19,7 +19,7 @@ let feet = input.map((dimensions) => {
     let ribbon = new Ribbon(box.length, box.width, box.height)
 
     calc += ribbon.ribbonFeet()
-    
+
     return dimensions
 })
 

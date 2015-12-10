@@ -5,7 +5,7 @@ const fs = require('fs')
 let input = fs.readFileSync('input.txt', 'utf8').split('')
 let floor = 1
 
-let res = input.map((direction) => {
+let res = input.map(direction => {
   if (direction === '(') {
     floor++
   }
