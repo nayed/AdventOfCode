@@ -1,64 +1,26 @@
 'use strict'
 
 import fs from 'fs'
+import Grid from './grid.js'
 
-let input = fs.readFileSync('test.txt', 'utf8').split('')
-let n = 0
-let e = 0
-let s = 0
-let w = 0
-let house = 0
-let prevmove = ''
-let responses = input.map(direction => {
-    let grid = []
+let input = fs.readFileSync('input.txt', 'utf8').split('')
 
-    /*
-              [0, 1]
-                 ^
-                 |
-    [-1, 0] < ---|-- > [1, 0]
-                 |
-                 v
-              [0, -1]
-    */
-    const MOVES = {
-      '^': [0, 1],
-      '>': [1, 0],
-      'v': [0, -1],
-      '<': [-1, 0],
+function new_location(current, move) {
+    let movements = {
+        '^': current => new Grid(current.x, current.y + 1),
+        'v': current => new Grid(current.x, current.y - 1),
+        '>': current => new Grid(current.x + 1, current.y),
+        '<': current => new Grid(current.x - 1, current.y)
     }
+    return movements[move](current)
+}
 
-    switch (direction) {
-        case '^':
-            if ((prevmove !== 'v') || (prevmove === '')) {
-                house++
-            }
-            prevmove = '^'
-            break;
-        case '>':
-            if ((prevmove !== '<') || (prevmove === '')) {
-                house++
-            }
-            prevmove = '>'
-            break;
-        case 'v':
-            if ((prevmove !== '^') || (prevmove === '')) {
-                house++
-            }
-            prevmove = 'v'
-            break;
-        case '<':
-            if ((prevmove !== '>') || (prevmove === '')) {
-                house++
-            }
-            prevmove = '<'
-            break;
-        default:
-            return 'what?'
-            break;
-    }
+let current = new Grid(0, 0)
+let visited = new Set([current.position()])
 
-    return direction
+let response = input.map(move => {
+    current = new_location(current, move)
+    visited.add(current.position())
 })
 
-console.log(house)
+console.log(visited.size)
