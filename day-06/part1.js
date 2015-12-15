@@ -3,14 +3,23 @@
 import fs from 'fs'
 
 let input = fs.readFileSync('test.txt', 'utf8').split('\n')
-let start = null
-let end = null
-let rules = /([0-9])+/
-let data = null
 
+var patt = new RegExp(/^[0-9,0-9]+$/)
+let coordinates = []
+coordinates.push('hi')
+
+
+/*let i = 0
 let answer = input.map(instruction => {
-    data = /(.+?)\s(\d+),(\d+).+?(\d+),(\d+)/g.exec(instruction)
-    return data
-})
+    instruction = instruction.split(' ')
+    instruction.map(coord => {
+        if (patt.test(coord)) {
+            coordinates[i].push(coord)
+        }
+    })
 
-console.log(data)
+    //console.log(instruction)
+    i++
+})*/
+
+console.log(coordinates)
