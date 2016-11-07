@@ -1,15 +1,13 @@
 # AdventOfCode
-My progress in Advent of Code 2015 http://adventofcode.com/
+My progress in Advent of Code http://adventofcode.com/
 
 ```bash
-npm install -g babel
+yarn global add babel-cli
 
-npm install -g babel-core
-
-npm install
+yarn install
 
 # and then cd in a day directory
-cd day-01
+cd 2015/day-01
 
 babel-node nameofthefile.js
 
