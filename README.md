@@ -7,7 +7,7 @@ yarn global add babel-cli
 yarn install
 
 # and then cd in a day directory
-cd 2015/day-01
+cd 2015/day01
 
 babel-node nameofthefile.js
 
