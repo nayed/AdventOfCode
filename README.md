@@ -1,5 +1,16 @@
 # AdventOfCode
 
+```
+             *
+            /.\
+           /..'\
+           /'.'\
+          /.''.'\
+          /.'.'.\
+   "'""""/'.''.'.\""'"'"
+         ^^^[_]^^^
+```
+
 My attempts to the Advent of Code challenge.
 
 One different language per year! Yay! :tada:
