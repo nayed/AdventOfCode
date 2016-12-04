@@ -1,14 +1,18 @@
 # AdventOfCode
-My progress in Advent of Code http://adventofcode.com/
 
-```bash
-yarn global add babel-cli
+My attempts to the Advent of Code challenge.
 
-yarn install
+One different language per year! Yay! :tada:
 
-# and then cd in a day directory
-cd 2015/day01
+http://adventofcode.com
 
-babel-node nameofthefile.js
-
-```
+<table>
+  <tr>
+      <td>2015</td>
+      <td>Javascript</td>
+  </tr>
+  <tr>
+      <td>2016</td>
+      <td>Ruby</td>
+  </tr>
+</table>
